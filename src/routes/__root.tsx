@@ -5,48 +5,43 @@ import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 export const Route = createRootRoute({
   component: () => (
     <>
-      <header className="relative bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 shadow-lg">
+      <header className="border-b border-gray-200 bg-white">
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo/Title */}
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center transform hover:rotate-12 transition-transform duration-300">
-                <span className="text-2xl">🎨</span>
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-indigo-500 flex items-center justify-center text-white text-sm font-semibold transform hover:rotate-6 transition-transform duration-200">
+                3D
               </div>
-              <h1 className="text-white font-bold text-xl tracking-tight">
-                Three.js <span className="font-light">Playground</span>
+              <h1 className="text-gray-900 font-semibold text-lg tracking-tight">
+                Three.js Playground
               </h1>
             </div>
 
             {/* Navigation Links */}
-            <div className="flex gap-3">
+            <div className="flex gap-2">
               <Link
                 to="/"
-                className="group relative px-6 py-2.5 text-white font-semibold rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                className="px-4 py-2 text-gray-700 font-medium rounded-lg hover:bg-gray-100 transition-colors duration-200"
                 activeProps={{
-                  className: 'bg-white/30 shadow-2xl scale-105',
+                  className: 'bg-indigo-50 text-indigo-600 font-semibold',
                 }}
               >
-                <span className="relative z-10">🎯 Demo 1</span>
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                Demo 1
               </Link>
 
               <Link
                 to="/demo2"
-                className="group relative px-6 py-2.5 text-white font-semibold rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                className="px-4 py-2 text-gray-700 font-medium rounded-lg hover:bg-gray-100 transition-colors duration-200"
                 activeProps={{
-                  className: 'bg-white/30 shadow-2xl scale-105',
+                  className: 'bg-indigo-50 text-indigo-600 font-semibold',
                 }}
               >
-                <span className="relative z-10">🚀 Demo 2</span>
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400 to-emerald-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                Demo 2
               </Link>
             </div>
           </div>
         </nav>
-
-        {/* Decorative bottom border with animation */}
-        <div className="h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-pulse"></div>
       </header>
       <Outlet />
       <TanStackDevtools

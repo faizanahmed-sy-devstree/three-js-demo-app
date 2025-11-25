@@ -1,6 +1,6 @@
 import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import { createFileRoute, Link } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 import { useRef } from 'react'
 import * as THREE from 'three'
 
@@ -47,7 +47,7 @@ function RotatingBox() {
 function App() {
   return (
     <>
-      <main className="h-[calc(100dvh-73px)] w-full">
+      <main className="h-[calc(100dvh-65px)] w-full">
         {/* // Canvas = the main 3D playground. // Anything inside Canvas becomes part
       of the 3D scene. */}
         <Canvas
