@@ -21,6 +21,7 @@ import { Route as R3fCanvasRouteImport } from './routes/r3f-canvas'
 import { Route as R3fBasicsRouteImport } from './routes/r3f-basics'
 import { Route as PostProcessingRouteImport } from './routes/post-processing'
 import { Route as PhysicsRouteImport } from './routes/physics'
+import { Route as MyHomeRouteImport } from './routes/my-home'
 import { Route as ModelRouteImport } from './routes/model'
 import { Route as MeshRouteImport } from './routes/mesh'
 import { Route as MathRouteImport } from './routes/math'
@@ -94,6 +95,11 @@ const PostProcessingRoute = PostProcessingRouteImport.update({
 const PhysicsRoute = PhysicsRouteImport.update({
   id: '/physics',
   path: '/physics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MyHomeRoute = MyHomeRouteImport.update({
+  id: '/my-home',
+  path: '/my-home',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ModelRoute = ModelRouteImport.update({
@@ -182,6 +188,7 @@ export interface FileRoutesByFullPath {
   '/math': typeof MathRoute
   '/mesh': typeof MeshRoute
   '/model': typeof ModelRoute
+  '/my-home': typeof MyHomeRoute
   '/physics': typeof PhysicsRoute
   '/post-processing': typeof PostProcessingRoute
   '/r3f-basics': typeof R3fBasicsRoute
@@ -210,6 +217,7 @@ export interface FileRoutesByTo {
   '/math': typeof MathRoute
   '/mesh': typeof MeshRoute
   '/model': typeof ModelRoute
+  '/my-home': typeof MyHomeRoute
   '/physics': typeof PhysicsRoute
   '/post-processing': typeof PostProcessingRoute
   '/r3f-basics': typeof R3fBasicsRoute
@@ -239,6 +247,7 @@ export interface FileRoutesById {
   '/math': typeof MathRoute
   '/mesh': typeof MeshRoute
   '/model': typeof ModelRoute
+  '/my-home': typeof MyHomeRoute
   '/physics': typeof PhysicsRoute
   '/post-processing': typeof PostProcessingRoute
   '/r3f-basics': typeof R3fBasicsRoute
@@ -269,6 +278,7 @@ export interface FileRouteTypes {
     | '/math'
     | '/mesh'
     | '/model'
+    | '/my-home'
     | '/physics'
     | '/post-processing'
     | '/r3f-basics'
@@ -297,6 +307,7 @@ export interface FileRouteTypes {
     | '/math'
     | '/mesh'
     | '/model'
+    | '/my-home'
     | '/physics'
     | '/post-processing'
     | '/r3f-basics'
@@ -325,6 +336,7 @@ export interface FileRouteTypes {
     | '/math'
     | '/mesh'
     | '/model'
+    | '/my-home'
     | '/physics'
     | '/post-processing'
     | '/r3f-basics'
@@ -354,6 +366,7 @@ export interface RootRouteChildren {
   MathRoute: typeof MathRoute
   MeshRoute: typeof MeshRoute
   ModelRoute: typeof ModelRoute
+  MyHomeRoute: typeof MyHomeRoute
   PhysicsRoute: typeof PhysicsRoute
   PostProcessingRoute: typeof PostProcessingRoute
   R3fBasicsRoute: typeof R3fBasicsRoute
@@ -452,6 +465,13 @@ declare module '@tanstack/react-router' {
       path: '/physics'
       fullPath: '/physics'
       preLoaderRoute: typeof PhysicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my-home': {
+      id: '/my-home'
+      path: '/my-home'
+      fullPath: '/my-home'
+      preLoaderRoute: typeof MyHomeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/model': {
@@ -570,6 +590,7 @@ const rootRouteChildren: RootRouteChildren = {
   MathRoute: MathRoute,
   MeshRoute: MeshRoute,
   ModelRoute: ModelRoute,
+  MyHomeRoute: MyHomeRoute,
   PhysicsRoute: PhysicsRoute,
   PostProcessingRoute: PostProcessingRoute,
   R3fBasicsRoute: R3fBasicsRoute,

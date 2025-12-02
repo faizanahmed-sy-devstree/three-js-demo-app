@@ -3,6 +3,7 @@ import { NavLinkItem } from './NavLinkItem.tsx'
 import { Link } from '@tanstack/react-router'
 
 const navLinks = [
+  { label: 'My 3D home', to: '/my-home' },
   { label: 'Scene', to: '/scene' },
   { label: 'Camera', to: '/camera' },
   { label: 'Renderer', to: '/renderer' },
