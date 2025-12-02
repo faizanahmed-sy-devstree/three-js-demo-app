@@ -1,13 +1,12 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import {
+  Environment,
   OrbitControls,
   PerspectiveCamera,
-  OrthographicCamera,
-  Environment,
 } from '@react-three/drei'
-import * as THREE from 'three'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { createFileRoute } from '@tanstack/react-router'
 import { useRef } from 'react'
+import * as THREE from 'three'
 
 export const Route = createFileRoute('/demo2')({
   component: ThreeJSFundamentals,
