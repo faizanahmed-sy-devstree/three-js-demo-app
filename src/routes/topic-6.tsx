@@ -1,4 +1,9 @@
-import { OrbitControls } from '@react-three/drei'
+import {
+  OrbitControls,
+  PerspectiveCamera,
+  RenderTexture,
+  Text,
+} from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { createFileRoute } from '@tanstack/react-router'
 import { useRef, useState } from 'react'
@@ -42,7 +47,7 @@ function BasicShape() {
 // ==========================================
 function StandardShape() {
   const ref = useRef<THREE.Mesh>(null)
-  useFrame((state, delta) => (ref.current!.rotation.x += delta))
+  useFrame((state, delta) => (ref.current!.rotation.y += delta * 0.5))
 
   return (
     <mesh ref={ref} position={[0, 0, 0]}>
@@ -60,7 +65,23 @@ function StandardShape() {
         - 'metalness': 0 (plastic) to 1 (metal).
         - 'roughness': 0 (mirror) to 1 (chalk).
       */}
-      <meshStandardMaterial color="#7a2c91" roughness={0.2} metalness={0.8} />
+      <meshStandardMaterial roughness={0.2} metalness={0.8}>
+        <RenderTexture attach={'map'} anisotropy={16}>
+          <PerspectiveCamera
+            makeDefault
+            manual
+            aspect={1 / 1}
+            position={[0, 0, 5]}
+          />
+
+          <color attach={'background'} args={['#7a2c91']} />
+          <Text fontSize={0.5} color={'white'}>
+            Hello
+            {'\n'}
+            Devstree
+          </Text>
+        </RenderTexture>
+      </meshStandardMaterial>
     </mesh>
   )
 }
