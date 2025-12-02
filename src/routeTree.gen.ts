@@ -10,7 +10,30 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as Topic6RouteImport } from './routes/topic-6'
+import { Route as TexturesRouteImport } from './routes/textures'
+import { Route as Text3dRouteImport } from './routes/text-3d'
+import { Route as ShadersRouteImport } from './routes/shaders'
+import { Route as SceneRouteImport } from './routes/scene'
+import { Route as RendererRouteImport } from './routes/renderer'
+import { Route as RaycastingRouteImport } from './routes/raycasting'
+import { Route as R3fUseframeRouteImport } from './routes/r3f-useframe'
+import { Route as R3fCanvasRouteImport } from './routes/r3f-canvas'
+import { Route as R3fBasicsRouteImport } from './routes/r3f-basics'
+import { Route as PostProcessingRouteImport } from './routes/post-processing'
+import { Route as PhysicsRouteImport } from './routes/physics'
+import { Route as ModelRouteImport } from './routes/model'
+import { Route as MeshRouteImport } from './routes/mesh'
+import { Route as MathRouteImport } from './routes/math'
+import { Route as LoadersRouteImport } from './routes/loaders'
+import { Route as LightingRouteImport } from './routes/lighting'
+import { Route as HelpersRouteImport } from './routes/helpers'
+import { Route as GeometryMaterialsRouteImport } from './routes/geometry-materials'
+import { Route as DreiUsegltfRouteImport } from './routes/drei-usegltf'
+import { Route as DreiOrbitControlsRouteImport } from './routes/drei-orbit-controls'
 import { Route as Demo2RouteImport } from './routes/demo2'
+import { Route as CameraRouteImport } from './routes/camera'
+import { Route as AudioRouteImport } from './routes/audio'
+import { Route as AnimationRouteImport } from './routes/animation'
 import { Route as IndexRouteImport } from './routes/index'
 
 const Topic6Route = Topic6RouteImport.update({
@@ -18,9 +41,124 @@ const Topic6Route = Topic6RouteImport.update({
   path: '/topic-6',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TexturesRoute = TexturesRouteImport.update({
+  id: '/textures',
+  path: '/textures',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Text3dRoute = Text3dRouteImport.update({
+  id: '/text-3d',
+  path: '/text-3d',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShadersRoute = ShadersRouteImport.update({
+  id: '/shaders',
+  path: '/shaders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SceneRoute = SceneRouteImport.update({
+  id: '/scene',
+  path: '/scene',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RendererRoute = RendererRouteImport.update({
+  id: '/renderer',
+  path: '/renderer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RaycastingRoute = RaycastingRouteImport.update({
+  id: '/raycasting',
+  path: '/raycasting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const R3fUseframeRoute = R3fUseframeRouteImport.update({
+  id: '/r3f-useframe',
+  path: '/r3f-useframe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const R3fCanvasRoute = R3fCanvasRouteImport.update({
+  id: '/r3f-canvas',
+  path: '/r3f-canvas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const R3fBasicsRoute = R3fBasicsRouteImport.update({
+  id: '/r3f-basics',
+  path: '/r3f-basics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PostProcessingRoute = PostProcessingRouteImport.update({
+  id: '/post-processing',
+  path: '/post-processing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhysicsRoute = PhysicsRouteImport.update({
+  id: '/physics',
+  path: '/physics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModelRoute = ModelRouteImport.update({
+  id: '/model',
+  path: '/model',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MeshRoute = MeshRouteImport.update({
+  id: '/mesh',
+  path: '/mesh',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MathRoute = MathRouteImport.update({
+  id: '/math',
+  path: '/math',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoadersRoute = LoadersRouteImport.update({
+  id: '/loaders',
+  path: '/loaders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LightingRoute = LightingRouteImport.update({
+  id: '/lighting',
+  path: '/lighting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpersRoute = HelpersRouteImport.update({
+  id: '/helpers',
+  path: '/helpers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GeometryMaterialsRoute = GeometryMaterialsRouteImport.update({
+  id: '/geometry-materials',
+  path: '/geometry-materials',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DreiUsegltfRoute = DreiUsegltfRouteImport.update({
+  id: '/drei-usegltf',
+  path: '/drei-usegltf',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DreiOrbitControlsRoute = DreiOrbitControlsRouteImport.update({
+  id: '/drei-orbit-controls',
+  path: '/drei-orbit-controls',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const Demo2Route = Demo2RouteImport.update({
   id: '/demo2',
   path: '/demo2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CameraRoute = CameraRouteImport.update({
+  id: '/camera',
+  path: '/camera',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AudioRoute = AudioRouteImport.update({
+  id: '/audio',
+  path: '/audio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnimationRoute = AnimationRouteImport.update({
+  id: '/animation',
+  path: '/animation',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -31,31 +169,202 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/animation': typeof AnimationRoute
+  '/audio': typeof AudioRoute
+  '/camera': typeof CameraRoute
   '/demo2': typeof Demo2Route
+  '/drei-orbit-controls': typeof DreiOrbitControlsRoute
+  '/drei-usegltf': typeof DreiUsegltfRoute
+  '/geometry-materials': typeof GeometryMaterialsRoute
+  '/helpers': typeof HelpersRoute
+  '/lighting': typeof LightingRoute
+  '/loaders': typeof LoadersRoute
+  '/math': typeof MathRoute
+  '/mesh': typeof MeshRoute
+  '/model': typeof ModelRoute
+  '/physics': typeof PhysicsRoute
+  '/post-processing': typeof PostProcessingRoute
+  '/r3f-basics': typeof R3fBasicsRoute
+  '/r3f-canvas': typeof R3fCanvasRoute
+  '/r3f-useframe': typeof R3fUseframeRoute
+  '/raycasting': typeof RaycastingRoute
+  '/renderer': typeof RendererRoute
+  '/scene': typeof SceneRoute
+  '/shaders': typeof ShadersRoute
+  '/text-3d': typeof Text3dRoute
+  '/textures': typeof TexturesRoute
   '/topic-6': typeof Topic6Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/animation': typeof AnimationRoute
+  '/audio': typeof AudioRoute
+  '/camera': typeof CameraRoute
   '/demo2': typeof Demo2Route
+  '/drei-orbit-controls': typeof DreiOrbitControlsRoute
+  '/drei-usegltf': typeof DreiUsegltfRoute
+  '/geometry-materials': typeof GeometryMaterialsRoute
+  '/helpers': typeof HelpersRoute
+  '/lighting': typeof LightingRoute
+  '/loaders': typeof LoadersRoute
+  '/math': typeof MathRoute
+  '/mesh': typeof MeshRoute
+  '/model': typeof ModelRoute
+  '/physics': typeof PhysicsRoute
+  '/post-processing': typeof PostProcessingRoute
+  '/r3f-basics': typeof R3fBasicsRoute
+  '/r3f-canvas': typeof R3fCanvasRoute
+  '/r3f-useframe': typeof R3fUseframeRoute
+  '/raycasting': typeof RaycastingRoute
+  '/renderer': typeof RendererRoute
+  '/scene': typeof SceneRoute
+  '/shaders': typeof ShadersRoute
+  '/text-3d': typeof Text3dRoute
+  '/textures': typeof TexturesRoute
   '/topic-6': typeof Topic6Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/animation': typeof AnimationRoute
+  '/audio': typeof AudioRoute
+  '/camera': typeof CameraRoute
   '/demo2': typeof Demo2Route
+  '/drei-orbit-controls': typeof DreiOrbitControlsRoute
+  '/drei-usegltf': typeof DreiUsegltfRoute
+  '/geometry-materials': typeof GeometryMaterialsRoute
+  '/helpers': typeof HelpersRoute
+  '/lighting': typeof LightingRoute
+  '/loaders': typeof LoadersRoute
+  '/math': typeof MathRoute
+  '/mesh': typeof MeshRoute
+  '/model': typeof ModelRoute
+  '/physics': typeof PhysicsRoute
+  '/post-processing': typeof PostProcessingRoute
+  '/r3f-basics': typeof R3fBasicsRoute
+  '/r3f-canvas': typeof R3fCanvasRoute
+  '/r3f-useframe': typeof R3fUseframeRoute
+  '/raycasting': typeof RaycastingRoute
+  '/renderer': typeof RendererRoute
+  '/scene': typeof SceneRoute
+  '/shaders': typeof ShadersRoute
+  '/text-3d': typeof Text3dRoute
+  '/textures': typeof TexturesRoute
   '/topic-6': typeof Topic6Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/demo2' | '/topic-6'
+  fullPaths:
+    | '/'
+    | '/animation'
+    | '/audio'
+    | '/camera'
+    | '/demo2'
+    | '/drei-orbit-controls'
+    | '/drei-usegltf'
+    | '/geometry-materials'
+    | '/helpers'
+    | '/lighting'
+    | '/loaders'
+    | '/math'
+    | '/mesh'
+    | '/model'
+    | '/physics'
+    | '/post-processing'
+    | '/r3f-basics'
+    | '/r3f-canvas'
+    | '/r3f-useframe'
+    | '/raycasting'
+    | '/renderer'
+    | '/scene'
+    | '/shaders'
+    | '/text-3d'
+    | '/textures'
+    | '/topic-6'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/demo2' | '/topic-6'
-  id: '__root__' | '/' | '/demo2' | '/topic-6'
+  to:
+    | '/'
+    | '/animation'
+    | '/audio'
+    | '/camera'
+    | '/demo2'
+    | '/drei-orbit-controls'
+    | '/drei-usegltf'
+    | '/geometry-materials'
+    | '/helpers'
+    | '/lighting'
+    | '/loaders'
+    | '/math'
+    | '/mesh'
+    | '/model'
+    | '/physics'
+    | '/post-processing'
+    | '/r3f-basics'
+    | '/r3f-canvas'
+    | '/r3f-useframe'
+    | '/raycasting'
+    | '/renderer'
+    | '/scene'
+    | '/shaders'
+    | '/text-3d'
+    | '/textures'
+    | '/topic-6'
+  id:
+    | '__root__'
+    | '/'
+    | '/animation'
+    | '/audio'
+    | '/camera'
+    | '/demo2'
+    | '/drei-orbit-controls'
+    | '/drei-usegltf'
+    | '/geometry-materials'
+    | '/helpers'
+    | '/lighting'
+    | '/loaders'
+    | '/math'
+    | '/mesh'
+    | '/model'
+    | '/physics'
+    | '/post-processing'
+    | '/r3f-basics'
+    | '/r3f-canvas'
+    | '/r3f-useframe'
+    | '/raycasting'
+    | '/renderer'
+    | '/scene'
+    | '/shaders'
+    | '/text-3d'
+    | '/textures'
+    | '/topic-6'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnimationRoute: typeof AnimationRoute
+  AudioRoute: typeof AudioRoute
+  CameraRoute: typeof CameraRoute
   Demo2Route: typeof Demo2Route
+  DreiOrbitControlsRoute: typeof DreiOrbitControlsRoute
+  DreiUsegltfRoute: typeof DreiUsegltfRoute
+  GeometryMaterialsRoute: typeof GeometryMaterialsRoute
+  HelpersRoute: typeof HelpersRoute
+  LightingRoute: typeof LightingRoute
+  LoadersRoute: typeof LoadersRoute
+  MathRoute: typeof MathRoute
+  MeshRoute: typeof MeshRoute
+  ModelRoute: typeof ModelRoute
+  PhysicsRoute: typeof PhysicsRoute
+  PostProcessingRoute: typeof PostProcessingRoute
+  R3fBasicsRoute: typeof R3fBasicsRoute
+  R3fCanvasRoute: typeof R3fCanvasRoute
+  R3fUseframeRoute: typeof R3fUseframeRoute
+  RaycastingRoute: typeof RaycastingRoute
+  RendererRoute: typeof RendererRoute
+  SceneRoute: typeof SceneRoute
+  ShadersRoute: typeof ShadersRoute
+  Text3dRoute: typeof Text3dRoute
+  TexturesRoute: typeof TexturesRoute
   Topic6Route: typeof Topic6Route
 }
 
@@ -68,11 +377,172 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Topic6RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/textures': {
+      id: '/textures'
+      path: '/textures'
+      fullPath: '/textures'
+      preLoaderRoute: typeof TexturesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/text-3d': {
+      id: '/text-3d'
+      path: '/text-3d'
+      fullPath: '/text-3d'
+      preLoaderRoute: typeof Text3dRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shaders': {
+      id: '/shaders'
+      path: '/shaders'
+      fullPath: '/shaders'
+      preLoaderRoute: typeof ShadersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scene': {
+      id: '/scene'
+      path: '/scene'
+      fullPath: '/scene'
+      preLoaderRoute: typeof SceneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/renderer': {
+      id: '/renderer'
+      path: '/renderer'
+      fullPath: '/renderer'
+      preLoaderRoute: typeof RendererRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/raycasting': {
+      id: '/raycasting'
+      path: '/raycasting'
+      fullPath: '/raycasting'
+      preLoaderRoute: typeof RaycastingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/r3f-useframe': {
+      id: '/r3f-useframe'
+      path: '/r3f-useframe'
+      fullPath: '/r3f-useframe'
+      preLoaderRoute: typeof R3fUseframeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/r3f-canvas': {
+      id: '/r3f-canvas'
+      path: '/r3f-canvas'
+      fullPath: '/r3f-canvas'
+      preLoaderRoute: typeof R3fCanvasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/r3f-basics': {
+      id: '/r3f-basics'
+      path: '/r3f-basics'
+      fullPath: '/r3f-basics'
+      preLoaderRoute: typeof R3fBasicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/post-processing': {
+      id: '/post-processing'
+      path: '/post-processing'
+      fullPath: '/post-processing'
+      preLoaderRoute: typeof PostProcessingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/physics': {
+      id: '/physics'
+      path: '/physics'
+      fullPath: '/physics'
+      preLoaderRoute: typeof PhysicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/model': {
+      id: '/model'
+      path: '/model'
+      fullPath: '/model'
+      preLoaderRoute: typeof ModelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mesh': {
+      id: '/mesh'
+      path: '/mesh'
+      fullPath: '/mesh'
+      preLoaderRoute: typeof MeshRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/math': {
+      id: '/math'
+      path: '/math'
+      fullPath: '/math'
+      preLoaderRoute: typeof MathRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loaders': {
+      id: '/loaders'
+      path: '/loaders'
+      fullPath: '/loaders'
+      preLoaderRoute: typeof LoadersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lighting': {
+      id: '/lighting'
+      path: '/lighting'
+      fullPath: '/lighting'
+      preLoaderRoute: typeof LightingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/helpers': {
+      id: '/helpers'
+      path: '/helpers'
+      fullPath: '/helpers'
+      preLoaderRoute: typeof HelpersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/geometry-materials': {
+      id: '/geometry-materials'
+      path: '/geometry-materials'
+      fullPath: '/geometry-materials'
+      preLoaderRoute: typeof GeometryMaterialsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drei-usegltf': {
+      id: '/drei-usegltf'
+      path: '/drei-usegltf'
+      fullPath: '/drei-usegltf'
+      preLoaderRoute: typeof DreiUsegltfRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drei-orbit-controls': {
+      id: '/drei-orbit-controls'
+      path: '/drei-orbit-controls'
+      fullPath: '/drei-orbit-controls'
+      preLoaderRoute: typeof DreiOrbitControlsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/demo2': {
       id: '/demo2'
       path: '/demo2'
       fullPath: '/demo2'
       preLoaderRoute: typeof Demo2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/camera': {
+      id: '/camera'
+      path: '/camera'
+      fullPath: '/camera'
+      preLoaderRoute: typeof CameraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/audio': {
+      id: '/audio'
+      path: '/audio'
+      fullPath: '/audio'
+      preLoaderRoute: typeof AudioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/animation': {
+      id: '/animation'
+      path: '/animation'
+      fullPath: '/animation'
+      preLoaderRoute: typeof AnimationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -87,7 +557,30 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnimationRoute: AnimationRoute,
+  AudioRoute: AudioRoute,
+  CameraRoute: CameraRoute,
   Demo2Route: Demo2Route,
+  DreiOrbitControlsRoute: DreiOrbitControlsRoute,
+  DreiUsegltfRoute: DreiUsegltfRoute,
+  GeometryMaterialsRoute: GeometryMaterialsRoute,
+  HelpersRoute: HelpersRoute,
+  LightingRoute: LightingRoute,
+  LoadersRoute: LoadersRoute,
+  MathRoute: MathRoute,
+  MeshRoute: MeshRoute,
+  ModelRoute: ModelRoute,
+  PhysicsRoute: PhysicsRoute,
+  PostProcessingRoute: PostProcessingRoute,
+  R3fBasicsRoute: R3fBasicsRoute,
+  R3fCanvasRoute: R3fCanvasRoute,
+  R3fUseframeRoute: R3fUseframeRoute,
+  RaycastingRoute: RaycastingRoute,
+  RendererRoute: RendererRoute,
+  SceneRoute: SceneRoute,
+  ShadersRoute: ShadersRoute,
+  Text3dRoute: Text3dRoute,
+  TexturesRoute: TexturesRoute,
   Topic6Route: Topic6Route,
 }
 export const routeTree = rootRouteImport
