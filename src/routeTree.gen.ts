@@ -32,6 +32,7 @@ import { Route as GeometryMaterialsRouteImport } from './routes/geometry-materia
 import { Route as DreiUsegltfRouteImport } from './routes/drei-usegltf'
 import { Route as DreiOrbitControlsRouteImport } from './routes/drei-orbit-controls'
 import { Route as Demo2RouteImport } from './routes/demo2'
+import { Route as CarGameRouteImport } from './routes/car-game'
 import { Route as CameraRouteImport } from './routes/camera'
 import { Route as AudioRouteImport } from './routes/audio'
 import { Route as AnimationRouteImport } from './routes/animation'
@@ -152,6 +153,11 @@ const Demo2Route = Demo2RouteImport.update({
   path: '/demo2',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CarGameRoute = CarGameRouteImport.update({
+  id: '/car-game',
+  path: '/car-game',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CameraRoute = CameraRouteImport.update({
   id: '/camera',
   path: '/camera',
@@ -178,6 +184,7 @@ export interface FileRoutesByFullPath {
   '/animation': typeof AnimationRoute
   '/audio': typeof AudioRoute
   '/camera': typeof CameraRoute
+  '/car-game': typeof CarGameRoute
   '/demo2': typeof Demo2Route
   '/drei-orbit-controls': typeof DreiOrbitControlsRoute
   '/drei-usegltf': typeof DreiUsegltfRoute
@@ -207,6 +214,7 @@ export interface FileRoutesByTo {
   '/animation': typeof AnimationRoute
   '/audio': typeof AudioRoute
   '/camera': typeof CameraRoute
+  '/car-game': typeof CarGameRoute
   '/demo2': typeof Demo2Route
   '/drei-orbit-controls': typeof DreiOrbitControlsRoute
   '/drei-usegltf': typeof DreiUsegltfRoute
@@ -237,6 +245,7 @@ export interface FileRoutesById {
   '/animation': typeof AnimationRoute
   '/audio': typeof AudioRoute
   '/camera': typeof CameraRoute
+  '/car-game': typeof CarGameRoute
   '/demo2': typeof Demo2Route
   '/drei-orbit-controls': typeof DreiOrbitControlsRoute
   '/drei-usegltf': typeof DreiUsegltfRoute
@@ -268,6 +277,7 @@ export interface FileRouteTypes {
     | '/animation'
     | '/audio'
     | '/camera'
+    | '/car-game'
     | '/demo2'
     | '/drei-orbit-controls'
     | '/drei-usegltf'
@@ -297,6 +307,7 @@ export interface FileRouteTypes {
     | '/animation'
     | '/audio'
     | '/camera'
+    | '/car-game'
     | '/demo2'
     | '/drei-orbit-controls'
     | '/drei-usegltf'
@@ -326,6 +337,7 @@ export interface FileRouteTypes {
     | '/animation'
     | '/audio'
     | '/camera'
+    | '/car-game'
     | '/demo2'
     | '/drei-orbit-controls'
     | '/drei-usegltf'
@@ -356,6 +368,7 @@ export interface RootRouteChildren {
   AnimationRoute: typeof AnimationRoute
   AudioRoute: typeof AudioRoute
   CameraRoute: typeof CameraRoute
+  CarGameRoute: typeof CarGameRoute
   Demo2Route: typeof Demo2Route
   DreiOrbitControlsRoute: typeof DreiOrbitControlsRoute
   DreiUsegltfRoute: typeof DreiUsegltfRoute
@@ -544,6 +557,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Demo2RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/car-game': {
+      id: '/car-game'
+      path: '/car-game'
+      fullPath: '/car-game'
+      preLoaderRoute: typeof CarGameRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/camera': {
       id: '/camera'
       path: '/camera'
@@ -580,6 +600,7 @@ const rootRouteChildren: RootRouteChildren = {
   AnimationRoute: AnimationRoute,
   AudioRoute: AudioRoute,
   CameraRoute: CameraRoute,
+  CarGameRoute: CarGameRoute,
   Demo2Route: Demo2Route,
   DreiOrbitControlsRoute: DreiOrbitControlsRoute,
   DreiUsegltfRoute: DreiUsegltfRoute,

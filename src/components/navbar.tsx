@@ -4,6 +4,7 @@ import { Link } from '@tanstack/react-router'
 
 const navLinks = [
   { label: 'My 3D home', to: '/my-home' },
+  { label: 'Car Game', to: '/car-game' },
   { label: 'Scene', to: '/scene' },
   { label: 'Camera', to: '/camera' },
   { label: 'Renderer', to: '/renderer' },
