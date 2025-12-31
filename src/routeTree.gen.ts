@@ -20,6 +20,8 @@ import { Route as R3fUseframeRouteImport } from './routes/r3f-useframe'
 import { Route as R3fCanvasRouteImport } from './routes/r3f-canvas'
 import { Route as R3fBasicsRouteImport } from './routes/r3f-basics'
 import { Route as PostProcessingRouteImport } from './routes/post-processing'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as PlayRouteImport } from './routes/play'
 import { Route as PhysicsRouteImport } from './routes/physics'
 import { Route as MyHomeRouteImport } from './routes/my-home'
 import { Route as ModelRouteImport } from './routes/model'
@@ -91,6 +93,16 @@ const R3fBasicsRoute = R3fBasicsRouteImport.update({
 const PostProcessingRoute = PostProcessingRouteImport.update({
   id: '/post-processing',
   path: '/post-processing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayRoute = PlayRouteImport.update({
+  id: '/play',
+  path: '/play',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PhysicsRoute = PhysicsRouteImport.update({
@@ -197,6 +209,8 @@ export interface FileRoutesByFullPath {
   '/model': typeof ModelRoute
   '/my-home': typeof MyHomeRoute
   '/physics': typeof PhysicsRoute
+  '/play': typeof PlayRoute
+  '/portfolio': typeof PortfolioRoute
   '/post-processing': typeof PostProcessingRoute
   '/r3f-basics': typeof R3fBasicsRoute
   '/r3f-canvas': typeof R3fCanvasRoute
@@ -227,6 +241,8 @@ export interface FileRoutesByTo {
   '/model': typeof ModelRoute
   '/my-home': typeof MyHomeRoute
   '/physics': typeof PhysicsRoute
+  '/play': typeof PlayRoute
+  '/portfolio': typeof PortfolioRoute
   '/post-processing': typeof PostProcessingRoute
   '/r3f-basics': typeof R3fBasicsRoute
   '/r3f-canvas': typeof R3fCanvasRoute
@@ -258,6 +274,8 @@ export interface FileRoutesById {
   '/model': typeof ModelRoute
   '/my-home': typeof MyHomeRoute
   '/physics': typeof PhysicsRoute
+  '/play': typeof PlayRoute
+  '/portfolio': typeof PortfolioRoute
   '/post-processing': typeof PostProcessingRoute
   '/r3f-basics': typeof R3fBasicsRoute
   '/r3f-canvas': typeof R3fCanvasRoute
@@ -290,6 +308,8 @@ export interface FileRouteTypes {
     | '/model'
     | '/my-home'
     | '/physics'
+    | '/play'
+    | '/portfolio'
     | '/post-processing'
     | '/r3f-basics'
     | '/r3f-canvas'
@@ -320,6 +340,8 @@ export interface FileRouteTypes {
     | '/model'
     | '/my-home'
     | '/physics'
+    | '/play'
+    | '/portfolio'
     | '/post-processing'
     | '/r3f-basics'
     | '/r3f-canvas'
@@ -350,6 +372,8 @@ export interface FileRouteTypes {
     | '/model'
     | '/my-home'
     | '/physics'
+    | '/play'
+    | '/portfolio'
     | '/post-processing'
     | '/r3f-basics'
     | '/r3f-canvas'
@@ -381,6 +405,8 @@ export interface RootRouteChildren {
   ModelRoute: typeof ModelRoute
   MyHomeRoute: typeof MyHomeRoute
   PhysicsRoute: typeof PhysicsRoute
+  PlayRoute: typeof PlayRoute
+  PortfolioRoute: typeof PortfolioRoute
   PostProcessingRoute: typeof PostProcessingRoute
   R3fBasicsRoute: typeof R3fBasicsRoute
   R3fCanvasRoute: typeof R3fCanvasRoute
@@ -471,6 +497,20 @@ declare module '@tanstack/react-router' {
       path: '/post-processing'
       fullPath: '/post-processing'
       preLoaderRoute: typeof PostProcessingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play': {
+      id: '/play'
+      path: '/play'
+      fullPath: '/play'
+      preLoaderRoute: typeof PlayRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/physics': {
@@ -613,6 +653,8 @@ const rootRouteChildren: RootRouteChildren = {
   ModelRoute: ModelRoute,
   MyHomeRoute: MyHomeRoute,
   PhysicsRoute: PhysicsRoute,
+  PlayRoute: PlayRoute,
+  PortfolioRoute: PortfolioRoute,
   PostProcessingRoute: PostProcessingRoute,
   R3fBasicsRoute: R3fBasicsRoute,
   R3fCanvasRoute: R3fCanvasRoute,

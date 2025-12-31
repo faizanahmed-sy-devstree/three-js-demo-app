@@ -1,8 +1,7 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { OrthographicCamera, PerspectiveCamera } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { PerspectiveCamera, OrthographicCamera } from '@react-three/drei'
-import { useState, useRef } from 'react'
-import { Vector3, MathUtils } from 'three'
+import { createFileRoute } from '@tanstack/react-router'
+import { useRef, useState } from 'react'
 
 export const Route = createFileRoute('/camera')({
   component: CameraTopic,
@@ -58,10 +57,11 @@ function PerspectiveExample() {
       <CityScene />
       <PerspectiveCamera
         makeDefault
-        position={[5, 5, 10]}
-        fov={60}
+        position={[10, 6, 5]}
+        // fov={60}
         onUpdate={(c) => c.lookAt(0, 0, 0)}
       />
+      {/* <OrbitControls /> */}
     </>
   )
 }
